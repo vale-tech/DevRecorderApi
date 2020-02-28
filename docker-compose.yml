@@ -1,0 +1,62 @@
+version: "3"
+
+networks: 
+  recordersimulator:   
+    driver: bridge
+    ipam:
+      config:
+        - subnet: "172.19.1.0/24"
+
+services:
+  recorderOne:
+    container_name: recorderOne
+    image:  recorderapi:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        HTTPS_PROXY: https://user:pass@hasaproxylikeme.com:port
+    ports:
+      - "8001:80"
+    networks:
+      recordersimulator:        
+        ipv4_address: 172.19.1.3
+    environment:
+      RecorderDatabaseSettings__ConnectionString: mongodb://user:pass@172.19.1.2:27017/recorderOne
+      RecorderDatabaseSettings__DatabaseName: recorderOne
+
+  recorderTwo:
+    container_name: recorderTwo
+    image:  recorderapi:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8002:80"
+    networks:
+      recordersimulator:        
+        ipv4_address: 172.19.1.4
+    environment:
+      RecorderDatabaseSettings__ConnectionString: mongodb://user:pass@172.19.1.2:27017/recorderTwo
+      RecorderDatabaseSettings__DatabaseName: recorderTwo    
+
+  db:
+    container_name: mongodb
+    image:  mongo
+    restart: always
+    #command: [--auth]
+    environment:
+            MONGO_INITDB_ROOT_USERNAME: admin
+            MONGO_INITDB_ROOT_PASSWORD: password
+            MONGO_INITDB_DATABASE: admin
+    ports:
+      - "27017:27017"
+    networks:
+      recordersimulator:
+        ipv4_address: 172.19.1.2
+    volumes:
+      - "mongodata:/data/db"
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+  
+volumes:
+  mongodata:

@@ -1,0 +1,63 @@
+
+GET https://localhost:5001/data/schedules/schedule/c3ea73fb-66eb-4768-8243-8dc0afb8b440
+Accept: application/json
+content-type: application/xml
+
+###
+
+GET http://localhost:8001/data/schedules/
+Accept: application/xml
+
+### ipv4.fiddler
+POST http://localhost:8001/data/schedules
+Authorization: user pass
+Accept: application/json
+content-type: application/xml
+
+<Schedule xmlns="http://schemas.javs.com/schedule/2010">
+  <Master>
+    <Id>schedule the second</Id>
+    <Title>MyTitle 2</Title>
+  </Master>
+  <Location>Earth</Location>
+  <Type>Arraignment</Type>
+  <Groups>
+    <Group>Group z</Group>
+    <Group>Group y</Group>
+    <Group>Group x</Group>
+  </Groups>
+  <StartTime>2019-05-28T13:21:00</StartTime>
+  <EndTime>2019-05-28T13:36:00</EndTime>
+  <Order>1</Order>
+  <Completed>false</Completed>
+  <AutoStart>true</AutoStart>
+  <AutoStartMinutesEarly>0</AutoStartMinutesEarly>
+  <AutoStop>false</AutoStop>
+</Schedule>
+
+### ipv4.fiddler
+POST http://localhost:8001/data/schedules
+Authorization: user pass
+Accept: application/xml
+content-type: application/xml
+
+<Schedule xmlns="http://schemas.javs.com/schedule/2010">
+  <Master>
+    <Id>Hearing 2 in Courtroom B</Id>
+    <Title>MyTitle 2</Title>
+  </Master>
+  <Location>Earth</Location>
+  <Type>Arraignment</Type>
+  <Groups>
+    <Group>Group z</Group>
+    <Group>Group y</Group>
+    <Group>Group x</Group>
+  </Groups>
+  <StartTime>2010-05-28T13:21:00</StartTime>
+  <EndTime>2010-05-28T13:36:00</EndTime>
+  <Order>1</Order>
+  <Completed>false</Completed>
+  <AutoStart>false</AutoStart>
+  <AutoStartMinutesEarly>0</AutoStartMinutesEarly>
+  <AutoStop>false</AutoStop>
+</Schedule>

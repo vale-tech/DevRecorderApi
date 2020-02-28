@@ -1,0 +1,344 @@
+
+GET https://localhost:5001/data/sessions/master/fullTest
+Accept: application/xml
+content-type: application/xml
+
+###
+GET http://localhost:8001/data/sessions/
+Accept: application/xml
+
+### ipv4.fiddler
+POST http://localhost:8001/data/sessions
+Authorization: user pass
+Accept: application/xml
+content-type: application/xml
+
+<Master xmlns="http://schemas.javs.com/master/2010">
+	<Id>myJavsScheduleIdSuperTrackingVAl</Id>
+	<Title>MyTitle 2</Title>
+	<Pack>Go</Pack>
+	<IsSealed>blah</IsSealed>
+	<Sessions>
+		<Session>
+			<SessionId>1</SessionId>
+			<Type>Civil Jury Trial</Type>
+			<Location>Move Left</Location>
+			<StartDate>2010-05-28T14:05:04.367</StartDate>
+			<EndDate>2010-05-28T14:05:19.677</EndDate>
+			<Events>
+				<Event>
+					<EventId>9ecc3d0b-42f1-4a39-982b-083e010d95dc</EventId>
+					<EventTypeCategoryId>27a82cbe-4618-4259-8053-4e8df9be2431</EventTypeCategoryId>
+					<EventTypeId>f850fa65-4ef4-421a-9241-e6e5937a4d8d</EventTypeId>
+					<Identifier>00000000-0000-0000-0000-000000000000</Identifier>
+					<IsPrivate>False</IsPrivate>
+					<IsSystemEvent>True</IsSystemEvent>
+					<Name>Session Started</Name>
+					<TimeStamp>2010-05-28T14:05:04.57</TimeStamp>
+					<Type>Master Started</Type>
+					<EventNotes />
+				</Event>
+				<Event>
+					<EventId>eb70e12f-39ee-4332-9fd0-b684b04a8795</EventId>
+					<EventTypeCategoryId>27a82cbe-4618-4259-8053-4e8df9be2431</EventTypeCategoryId>
+					<EventTypeId>0c6d11bb-68f9-47f3-853d-926119fee201</EventTypeId>
+					<Identifier>00000000-0000-0000-0000-000000000000</Identifier>
+					<IsPrivate>False</IsPrivate>
+					<IsSystemEvent>True</IsSystemEvent>
+					<Name>Session Ended</Name>
+					<TimeStamp>2010-05-28T14:05:19.677</TimeStamp>
+					<Type>Master Stopped</Type>
+					<EventNotes />
+				</Event>
+			</Events>
+			<MasterGroups>
+				<MasterGroup>
+					<MasterGroupID>842dce80-95ae-453c-a4d3-7d5e2e429651</MasterGroupID>
+					<Name>Prosecution</Name>
+					<Order>2</Order>
+					<IsLoggable>false</IsLoggable>
+					<Parties>
+						<Party>
+							<FirstName />
+							<LastName>Prosecutor</LastName>
+							<MiddleInitial />
+							<Prefix />
+							<Suffix />
+							<ExternalIdentifier />
+							<BirthDate>0001-01-01T00:00:00</BirthDate>
+						</Party>						
+					</Parties>
+				</MasterGroup>
+				<MasterGroup>
+					<MasterGroupID>f4b6d7cc-0803-49f8-b779-635ac589aa00</MasterGroupID>
+					<Name>Witness</Name>
+					<Order>6</Order>
+					<IsLoggable>true</IsLoggable>
+					<Parties>
+						<Party>
+							<FirstName>Jane</FirstName>
+							<LastName>Doe</LastName>
+							<MiddleInitial />
+							<Prefix />
+							<Suffix />
+							<ExternalIdentifier />
+							<BirthDate>0001-01-01T00:00:00</BirthDate>
+						</Party>
+					</Parties>
+				</MasterGroup>
+			</MasterGroups>
+			<Medias>
+				<Media>
+					<DeviceId>37dd2e40-02c4-4dfa-b5ae-095f240a891e</DeviceId>
+					<Height>240</Height>
+					<Incomplete>False</Incomplete>
+					<Path>sftp://192.168.111.146/.JAVS/Sessions/d01cedf7-ee7b-44c5-b019-13f37ca3dc4f</Path>
+					<Width>320</Width>
+					<MediaSegments />
+				</Media>
+			</Medias>
+		</Session>
+		<Session>
+			<SessionId>2</SessionId>
+			<Type>Civil Jury Trial</Type>
+			<Location>Move Left</Location>
+			<StartDate>2010-05-28T14:05:04.367</StartDate>
+			<EndDate>2010-05-28T14:05:19.677</EndDate>
+			<Events>
+				<Event>
+					<EventId>9ecc3d0b-42f1-4a39-982b-083e010d95dc</EventId>
+					<EventTypeCategoryId>27a82cbe-4618-4259-8053-4e8df9be2431</EventTypeCategoryId>
+					<EventTypeId>f850fa65-4ef4-421a-9241-e6e5937a4d8d</EventTypeId>
+					<Identifier>00000000-0000-0000-0000-000000000000</Identifier>
+					<IsPrivate>False</IsPrivate>
+					<IsSystemEvent>True</IsSystemEvent>
+					<Name>Session Started</Name>
+					<TimeStamp>2010-05-28T14:05:04.57</TimeStamp>
+					<Type>Master Started</Type>
+					<EventNotes />
+				</Event>
+				<Event>
+					<EventId>eb70e12f-39ee-4332-9fd0-b684b04a8795</EventId>
+					<EventTypeCategoryId>27a82cbe-4618-4259-8053-4e8df9be2431</EventTypeCategoryId>
+					<EventTypeId>0c6d11bb-68f9-47f3-853d-926119fee201</EventTypeId>
+					<Identifier>00000000-0000-0000-0000-000000000000</Identifier>
+					<IsPrivate>False</IsPrivate>
+					<IsSystemEvent>True</IsSystemEvent>
+					<Name>Session Ended</Name>
+					<TimeStamp>2010-05-28T14:05:19.677</TimeStamp>
+					<Type>Master Stopped</Type>
+					<EventNotes />
+				</Event>
+				<Event>
+					<EventId>eb70e12f-39ee-4332-9fd0-b684b04a8795</EventId>
+					<EventTypeCategoryId>27a82cbe-4618-4259-8053-4e8df9be2431</EventTypeCategoryId>
+					<EventTypeId>0c6d11bb-68f9-47f3-853d-926119fee201</EventTypeId>
+					<Identifier>00000000-0000-0000-0000-000000000000</Identifier>
+					<IsPrivate>False</IsPrivate>
+					<IsSystemEvent>True</IsSystemEvent>
+					<Name>Session Exploded</Name>
+					<TimeStamp>2010-05-28T14:05:19.677</TimeStamp>
+					<Type>Master Stopped</Type>
+					<EventNotes />
+				</Event>
+			</Events>
+			<MasterGroups>
+				<MasterGroup>
+					<MasterGroupID>842dce80-95ae-453c-a4d3-7d5e2e429651</MasterGroupID>
+					<Name>Defense</Name>
+					<Order>2</Order>
+					<IsLoggable>false</IsLoggable>
+					<Parties>
+						<Party>
+							<FirstName />
+							<LastName>Prosecutor</LastName>
+							<MiddleInitial />
+							<Prefix />
+							<Suffix />
+							<ExternalIdentifier />
+							<BirthDate>0001-01-01T00:00:00</BirthDate>
+						</Party>						
+					</Parties>
+				</MasterGroup>
+			</MasterGroups>
+			<Medias>
+				<Media>
+					<DeviceId>37dd2e40-02c4-4dfa-b5ae-095f240a891e</DeviceId>
+					<Height>240</Height>
+					<Incomplete>False</Incomplete>
+					<Path>sftp://192.168.111.146/.JAVS/Sessions/d01cedf7-ee7b-44c5-b019-13f37ca3dc4f</Path>
+					<Width>320</Width>
+					<MediaSegments />
+				</Media>
+			</Medias>
+		</Session>
+	</Sessions>
+</Master>
+
+### ipv4.fiddler
+POST https://localhost:5001/data/sessions
+Authorization: Basic abc123
+Accept: application/xml
+content-type: application/xml
+
+<Master xmlns="http://schemas.javs.com/master/2010">
+	<Id>fullTest</Id>
+	<Title>MyTitle 2</Title>
+	<Pack>Go</Pack>
+	<IsSealed>blah</IsSealed>
+	<Sessions>
+		<Session>
+			<SessionId>1</SessionId>
+			<Type>Civil Jury Trial</Type>
+			<Location>Move Left</Location>
+			<StartDate>2010-05-28T14:05:04.367</StartDate>
+			<EndDate>2010-05-28T14:05:19.677</EndDate>
+			<Events>
+				<Event>
+					<EventId>9ecc3d0b-42f1-4a39-982b-083e010d95dc</EventId>
+					<EventTypeCategoryId>27a82cbe-4618-4259-8053-4e8df9be2431</EventTypeCategoryId>
+					<EventTypeId>f850fa65-4ef4-421a-9241-e6e5937a4d8d</EventTypeId>
+					<Identifier>00000000-0000-0000-0000-000000000000</Identifier>
+					<IsPrivate>False</IsPrivate>
+					<IsSystemEvent>True</IsSystemEvent>
+					<Name>Session Started</Name>
+					<TimeStamp>2010-05-28T14:05:04.57</TimeStamp>
+					<Type>Master Started</Type>
+					<EventNotes />
+				</Event>
+				<Event>
+					<EventId>eb70e12f-39ee-4332-9fd0-b684b04a8795</EventId>
+					<EventTypeCategoryId>27a82cbe-4618-4259-8053-4e8df9be2431</EventTypeCategoryId>
+					<EventTypeId>0c6d11bb-68f9-47f3-853d-926119fee201</EventTypeId>
+					<Identifier>00000000-0000-0000-0000-000000000000</Identifier>
+					<IsPrivate>False</IsPrivate>
+					<IsSystemEvent>True</IsSystemEvent>
+					<Name>Session Ended</Name>
+					<TimeStamp>2010-05-28T14:05:19.677</TimeStamp>
+					<Type>Master Stopped</Type>
+					<EventNotes />
+				</Event>
+			</Events>
+			<MasterGroups>
+				<MasterGroup>
+					<MasterGroupID>842dce80-95ae-453c-a4d3-7d5e2e429651</MasterGroupID>
+					<Name>Prosecution</Name>
+					<Order>2</Order>
+					<IsLoggable>false</IsLoggable>
+					<Parties>
+						<Party>
+							<FirstName />
+							<LastName>Prosecutor</LastName>
+							<MiddleInitial />
+							<Prefix />
+							<Suffix />
+							<ExternalIdentifier />
+							<BirthDate>0001-01-01T00:00:00</BirthDate>
+						</Party>						
+					</Parties>
+				</MasterGroup>
+				<MasterGroup>
+					<MasterGroupID>f4b6d7cc-0803-49f8-b779-635ac589aa00</MasterGroupID>
+					<Name>Witness</Name>
+					<Order>6</Order>
+					<IsLoggable>true</IsLoggable>
+					<Parties>
+						<Party>
+							<FirstName>Jane</FirstName>
+							<LastName>Doe</LastName>
+							<MiddleInitial />
+							<Prefix />
+							<Suffix />
+							<ExternalIdentifier />
+							<BirthDate>0001-01-01T00:00:00</BirthDate>
+						</Party>
+					</Parties>
+				</MasterGroup>
+			</MasterGroups>
+			<Medias>
+				<Media>
+					<DeviceId>37dd2e40-02c4-4dfa-b5ae-095f240a891e</DeviceId>
+					<Height>240</Height>
+					<Incomplete>False</Incomplete>
+					<Path>sftp://192.168.111.146/.JAVS/Sessions/d01cedf7-ee7b-44c5-b019-13f37ca3dc4f</Path>
+					<Width>320</Width>
+					<MediaSegments />
+				</Media>
+			</Medias>
+		</Session>
+		<Session>
+			<SessionId>2</SessionId>
+			<Type>Civil Jury Trial</Type>
+			<Location>Move Left</Location>
+			<StartDate>2010-05-28T14:05:04.367</StartDate>
+			<EndDate>2010-05-28T14:05:19.677</EndDate>
+			<Events>
+				<Event>
+					<EventId>9ecc3d0b-42f1-4a39-982b-083e010d95dc</EventId>
+					<EventTypeCategoryId>27a82cbe-4618-4259-8053-4e8df9be2431</EventTypeCategoryId>
+					<EventTypeId>f850fa65-4ef4-421a-9241-e6e5937a4d8d</EventTypeId>
+					<Identifier>00000000-0000-0000-0000-000000000000</Identifier>
+					<IsPrivate>False</IsPrivate>
+					<IsSystemEvent>True</IsSystemEvent>
+					<Name>Session Started</Name>
+					<TimeStamp>2010-05-28T14:05:04.57</TimeStamp>
+					<Type>Master Started</Type>
+					<EventNotes />
+				</Event>
+				<Event>
+					<EventId>eb70e12f-39ee-4332-9fd0-b684b04a8795</EventId>
+					<EventTypeCategoryId>27a82cbe-4618-4259-8053-4e8df9be2431</EventTypeCategoryId>
+					<EventTypeId>0c6d11bb-68f9-47f3-853d-926119fee201</EventTypeId>
+					<Identifier>00000000-0000-0000-0000-000000000000</Identifier>
+					<IsPrivate>False</IsPrivate>
+					<IsSystemEvent>True</IsSystemEvent>
+					<Name>Session Ended</Name>
+					<TimeStamp>2010-05-28T14:05:19.677</TimeStamp>
+					<Type>Master Stopped</Type>
+					<EventNotes />
+				</Event>
+				<Event>
+					<EventId>eb70e12f-39ee-4332-9fd0-b684b04a8795</EventId>
+					<EventTypeCategoryId>27a82cbe-4618-4259-8053-4e8df9be2431</EventTypeCategoryId>
+					<EventTypeId>0c6d11bb-68f9-47f3-853d-926119fee201</EventTypeId>
+					<Identifier>00000000-0000-0000-0000-000000000000</Identifier>
+					<IsPrivate>False</IsPrivate>
+					<IsSystemEvent>True</IsSystemEvent>
+					<Name>Session Exploded</Name>
+					<TimeStamp>2010-05-28T14:05:19.677</TimeStamp>
+					<Type>Master Stopped</Type>
+					<EventNotes />
+				</Event>
+			</Events>
+			<MasterGroups>
+				<MasterGroup>
+					<MasterGroupID>842dce80-95ae-453c-a4d3-7d5e2e429651</MasterGroupID>
+					<Name>Defense</Name>
+					<Order>2</Order>
+					<IsLoggable>false</IsLoggable>
+					<Parties>
+						<Party>
+							<FirstName />
+							<LastName>Prosecutor</LastName>
+							<MiddleInitial />
+							<Prefix />
+							<Suffix />
+							<ExternalIdentifier />
+							<BirthDate>0001-01-01T00:00:00</BirthDate>
+						</Party>						
+					</Parties>
+				</MasterGroup>
+			</MasterGroups>
+			<Medias>
+				<Media>
+					<DeviceId>37dd2e40-02c4-4dfa-b5ae-095f240a891e</DeviceId>
+					<Height>240</Height>
+					<Incomplete>False</Incomplete>
+					<Path>sftp://192.168.111.146/.JAVS/Sessions/d01cedf7-ee7b-44c5-b019-13f37ca3dc4f</Path>
+					<Width>320</Width>
+					<MediaSegments />
+				</Media>
+			</Medias>
+		</Session>
+	</Sessions>
+</Master>
